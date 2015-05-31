@@ -18,6 +18,12 @@ public class MainActivity extends AppCompatActivity {
 
         // ナビゲーションメニューのクリックリスナー登録
         navigationView.setNavigationItemSelectedListener(getNavigationItemSelectedListener());
+
+        if (savedInstanceState == null) {
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.main_content, TextInputLayoutFragment.newInstance())
+                    .commit();
+        }
     }
 
     private NavigationView.OnNavigationItemSelectedListener getNavigationItemSelectedListener() {
