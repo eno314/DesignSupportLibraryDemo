@@ -1,10 +1,12 @@
 package eno314.jp.designsupportlibrarydemo;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +16,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final NavigationView navigationView = (NavigationView) findViewById(R.id.main_navigation);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+
+        // ナビゲーションメニューのクリックリスナー登録
+        navigationView.setNavigationItemSelectedListener(getNavigationItemSelectedListener());
+    }
+    
+    private NavigationView.OnNavigationItemSelectedListener getNavigationItemSelectedListener() {
+        return new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 menuItem.setChecked(true);
@@ -33,6 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
                 return false;
             }
-        });
+        };
     }
 }
