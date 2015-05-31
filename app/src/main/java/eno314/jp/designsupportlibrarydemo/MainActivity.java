@@ -1,7 +1,6 @@
 package eno314.jp.designsupportlibrarydemo;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -20,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         // ナビゲーションメニューのクリックリスナー登録
         navigationView.setNavigationItemSelectedListener(getNavigationItemSelectedListener());
     }
-    
+
     private NavigationView.OnNavigationItemSelectedListener getNavigationItemSelectedListener() {
         return new NavigationView.OnNavigationItemSelectedListener() {
             @Override
