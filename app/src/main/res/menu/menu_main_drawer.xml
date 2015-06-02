@@ -11,4 +11,14 @@
             android:icon="@drawable/ic_action_forward"
             android:title="navigation_item_2" />
     </group>
+
+    <item
+        android:id="@+id/navigation_subheader"
+        android:title="navigation_subheader">
+        <menu>
+            <item
+                android:id="@+id/navigation_subitem_show_snackbar"
+                android:title="show snackbar"/>
+        </menu>
+    </item>
 </menu>
