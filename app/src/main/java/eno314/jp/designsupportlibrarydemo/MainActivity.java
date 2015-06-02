@@ -57,13 +57,17 @@ public class MainActivity extends AppCompatActivity {
 
                 if (itemId == R.id.group_navigation_item_1) {
                     onSelectGroupNavigation(menuItem);
-                    Log.d("AAAAA", "group_navigation_item_1");
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.main_content, TextInputLayoutFragment.newInstance())
+                            .commit();
                     return true;
                 }
 
                 if (itemId == R.id.group_navigation_item_2) {
                     onSelectGroupNavigation(menuItem);
-                    Log.d("AAAAA", "group_navigation_item_2");
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.main_content, TabLayoutFragment.newInstance())
+                            .commit();
                     return true;
                 }
 
