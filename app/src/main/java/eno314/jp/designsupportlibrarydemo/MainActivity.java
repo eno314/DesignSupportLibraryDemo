@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (itemId == R.id.navigation_subitem_show_snackbar) {
-                    Snackbar.make(mDrawer, "message", Snackbar.LENGTH_LONG)
+                    Snackbar.make(findViewById(R.id.main_coordinator), "message", Snackbar.LENGTH_LONG)
                             .setAction("OK", new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
